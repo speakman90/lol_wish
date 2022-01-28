@@ -64,11 +64,12 @@ $("#yasuo").click(function(){
 
 $("#go").click(function(){
 
+    $("#go").prop('disabled', true);
     const interval = setInterval(timer, 1000)
     var i = 30;
 
         function timer() {
-            $("#timer").html(i);
+            $("#timer").html(i)
             i--
                 if (i == -1) {
                     clearInterval(interval)
@@ -96,7 +97,6 @@ if (r == 5 && b == 5) {
 }
 
 function equipe(a,o) {
-    var n = $(".champs").length;
     var m = $(".blue").length;
     var q = $(".rouge").length;
     var a;

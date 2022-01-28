@@ -14,6 +14,14 @@ h1{
     -webkit-text-stroke-color: black;
 }
 
+h2 {
+    text-align: center;
+    color:#785a28;
+    text-shadow:0 0 100px white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
 button {
     border: 0;
     background: #04101c;
@@ -40,8 +48,8 @@ button {
 #champions{
     display: flex;
     align-items: center;
-    height:10vh;
-    width:100vw;
+    height: 100px;
+    width: 100%;
     .choiChamp{
         display: flex;
         justify-content: space-evenly;
@@ -50,8 +58,8 @@ button {
 
 #aren {
     display: flex;
-    height: 70vh;
-    width: 100vw;
+    height: 70%;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     .combat {
@@ -60,6 +68,9 @@ button {
         .item-find {
             height: 100%;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .ar-blue {
             width: 100%;
@@ -81,6 +92,8 @@ button {
             background-size: 100%;
             width: 200%;
             height: 500px;
+            color: white;
+            text-align: center;
         }
     }
 }

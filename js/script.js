@@ -61,9 +61,22 @@ $("#yasuo").click(function(){
     showButton();
 });
 
+
 $("#go").click(function(){
-    spawnitem()
-    runbagare()
+
+    const interval = setInterval(timer, 1000)
+    var i = 30;
+
+        function timer() {
+            $("#timer").html(i);
+            i--
+                if (i == -1) {
+                    clearInterval(interval)
+                    $("#timer").css("visibility", "hidden")
+                    spawnitem()
+                    runbagare();
+                }
+            }
 })
 
 $('#resett').click(function(){
@@ -130,6 +143,7 @@ function spawnitem() {
         $('#droite').append("<div class='cleaver'></div>")
     }
 }
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

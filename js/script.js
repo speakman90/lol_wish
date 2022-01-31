@@ -85,8 +85,6 @@ $('#resett').click(function(){
 function equipe(a,o) {
     var m = $(".blue").length;
     var q = $(".rouge").length;
-    var a;
-    var o;
 
     $(a).removeClass('champs')
     $(a).addClass('blue')
@@ -95,7 +93,6 @@ function equipe(a,o) {
         $('#ar_blue').append($(a))
         bleu.push(o.attaque);
         bleup.push(o.pseudo);
-        console.log(bleu)
     } else if (q <= 4) {
         $('#ar_red').append($(a))
         $(a).removeClass('blue')
@@ -139,19 +136,17 @@ function spawnitem() {
     }
 }
 
-
 function nivExp() {
 
     if (temps == randExp_b()) {
         $('#gauche').append("<h3> ",randChamp_b()," prend 1 niveaux </h3>").css("color","white")
+
     }
     if (temps == randExp_r()) {
         $('#droite').append("<h3 style='color:white'> ",randChamp_r()," prend 1 niveaux </h3>").css("color","white")
+        
     }
 }
-
-
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -195,9 +190,9 @@ let yasuo = new Object();
     yasuo.pseudo= "yasuo";
     yasuo.attaque= 9.78;
 
-const rouge = [];
+let rouge = [];
 const rougep = [];
-const bleu = [];
+let bleu = [];
 const bleup = [];
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -206,14 +201,23 @@ function randItem() {
     return itemRand;
 };
 
+let niv = 1.1;
+
 function randChamp_b() {
-    const champRand_b = bleup[Math.floor(Math.random() * bleup.length)];
-    return champRand_b;
+    let champRand_b = bleu[Math.floor(Math.random() * bleu.length)];
+    let champRand_bp = bleup[Math.floor(Math.random() * bleup.length)];
+    niv++
+    champRand_b + niv
+    return champRand_bp;
 }
 
+
 function randChamp_r() {
-    const champRand_r = rougep[Math.floor(Math.random() * rougep.length)];
-    return champRand_r;
+    let champRand_r = rouge[Math.floor(Math.random() * rouge.length)];
+    let champRand_rp = rougep[Math.floor(Math.random() * rougep.length)];
+    niv++
+    champRand_r + niv
+    return champRand_rp;
 }
 
 function randItem_r() {
@@ -236,7 +240,7 @@ function randExp_b() {
     return randTime_exp_b;
 }
 
-
+let botte = new Object();
 
 const items = [botte=2, cleaver=5]
 

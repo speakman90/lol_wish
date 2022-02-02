@@ -40,9 +40,41 @@ button {
     }
 }
 
-
-.champions-title {
-    text-align: center;
+#title{
+    .infos {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+    #git {
+        font-size: 50px;
+        color: rgb(50, 50, 165);
+        &:hover {
+            color: white;
+            text-shadow:0 0 10px rgb(0, 0, 255);
+        }
+    }
+    #me {
+        font-size: 50px;
+        color: rgb(153, 62, 62);
+        &:hover {
+            color: white;
+            text-shadow:0 0 10px rgb(255, 0, 0);
+        }
+    }
+}
+    .champions-title {
+        text-align: center;
+        .social-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: -10px;
+            &__button {
+            margin: 10px 5px 0;
+            }
+        }
+    }
 }
 
 #champions{
@@ -98,15 +130,42 @@ button {
     }
 }
 
+
+
+
 .beta {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     box-shadow:0 0 15px #785a28;
+    z-index: 2;
     &:hover {
+        border: 5px solid #785a28;
         transform: scale(1.2);
     }
+.champs {
+    color: white;
+    border: 5px solid #785a28;
+    text-align: center;
+    width: 125px;
+    height: auto;
+    position: relative;
+    top: -8%;
+    left: -14%;
+    opacity: 0;
+    display: block;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &:hover {
+        opacity: 1;
+        transform: translateY(90%);
+        transition: all 0.3s linear;
+        }
+    }
 }
+
+
 
 #victory {
     visibility: hidden;
@@ -133,6 +192,9 @@ button {
     height: 100px;
     border-radius: 50%;
     box-shadow:0 0 10px blue;
+    &:hover {
+        border: 5px solid blue;
+    }
 }
 
 .rouge {
@@ -141,6 +203,9 @@ button {
     height: 100px;
     border-radius: 50%;
     box-shadow:0 0 10px red;
+    &:hover {
+        border: 5px solid red;
+    }
 }
 
 .statistique {
@@ -163,6 +228,7 @@ button {
     background: url("/style/img/XinZhao.jpg")top no-repeat;
     background-size: 100%;
 }
+
 #jinx {
     background: url("/style/img/Jinx.jpg")top no-repeat;
     background-size: 100%;

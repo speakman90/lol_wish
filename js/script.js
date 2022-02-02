@@ -4,52 +4,61 @@ $(function(){
 $("#xin").click(function(){
     var x = "#xin";
     equipe(x, xin);
+    $(x).parent().find('.champs').remove();
 });
 
 $("#jinx").click(function(){
     var j = "#jinx";
     equipe(j, jinx);
+    $(j).parent().find('.champs').remove();
 });
 
 $("#wukong").click(function(){
     var w = "#wukong";
     equipe(w, wukong);
+    $(w).parent().find('.champs').remove();
 });
 
 $("#master").click(function(){
     var m = "#master";
     equipe(m, master);
+    $(m).parent().find('.champs').remove();
 });
 
 $("#garen").click(function(){
     var g = "#garen";
     equipe(g, garen);
+    $(g).parent().find('.champs').remove();
 });
 
 $("#fizz").click(function(){
     var f = "#fizz";
     equipe(f, fizz);
+    $(f).parent().find('.champs').remove();
 });
 
 $("#ezreal").click(function(){
     var e = "#ezreal";
     equipe(e, ezreal);
+    $(e).parent().find('.champs').remove();
 });
 
 $("#tresh").click(function(){
     var t = "#tresh";
     equipe(t, tresh);
+    $(t).parent().find('.champs').remove();
 });
 
 $("#ivern").click(function(){
     var i = "#ivern";
     equipe(i, ivern);
+    $(i).parent().find('.champs').remove();
 });
 
 $("#yasuo").click(function(){
     var y = "#yasuo";
     equipe(y, yasuo);
-    
+    $(y).parent().find('.champs').remove();
 });
 
 
@@ -86,7 +95,7 @@ function equipe(a,o) {
     var m = $(".blue").length;
     var q = $(".rouge").length;
 
-    $(a).removeClass('champs')
+    
     $(a).addClass('blue')
 
     if (m < 5) {

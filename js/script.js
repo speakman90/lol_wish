@@ -1,64 +1,53 @@
 $(function(){
 
-
 $("#xin").click(function(){
-    var x = "#xin";
-    equipe(x, xin);
-    $(x).parent().find('.champs').remove();
+    equipe(this, xin);
+    $(this).parent().find('.champs').remove();
 });
 
 $("#jinx").click(function(){
-    var j = "#jinx";
-    equipe(j, jinx);
-    $(j).parent().find('.champs').remove();
+    equipe(this, jinx);
+    $(this).parent().find('.champs').remove();
 });
 
 $("#wukong").click(function(){
-    var w = "#wukong";
-    equipe(w, wukong);
-    $(w).parent().find('.champs').remove();
+    equipe(this, wukong);
+    $(this).parent().find('.champs').remove();
 });
 
 $("#master").click(function(){
-    var m = "#master";
-    equipe(m, master);
+    equipe(this, master);
     $(m).parent().find('.champs').remove();
 });
 
 $("#garen").click(function(){
-    var g = "#garen";
-    equipe(g, garen);
-    $(g).parent().find('.champs').remove();
+    equipe(this, garen);
+    $(this).parent().find('.champs').remove();
 });
 
 $("#fizz").click(function(){
-    var f = "#fizz";
-    equipe(f, fizz);
-    $(f).parent().find('.champs').remove();
+    equipe(this, fizz);
+    $(this).parent().find('.champs').remove();
 });
 
 $("#ezreal").click(function(){
-    var e = "#ezreal";
-    equipe(e, ezreal);
-    $(e).parent().find('.champs').remove();
+    equipe(this, ezreal);
+    $(this).parent().find('.champs').remove();
 });
 
 $("#tresh").click(function(){
-    var t = "#tresh";
-    equipe(t, tresh);
-    $(t).parent().find('.champs').remove();
+    equipe(this, tresh);
+    $(this).parent().find('.champs').remove();
 });
 
 $("#ivern").click(function(){
-    var i = "#ivern";
-    equipe(i, ivern);
-    $(i).parent().find('.champs').remove();
+    equipe(this, ivern);
+    $(this).parent().find('.champs').remove();
 });
 
 $("#yasuo").click(function(){
-    var y = "#yasuo";
-    equipe(y, yasuo);
-    $(y).parent().find('.champs').remove();
+    equipe(this, yasuo);
+    $(this).parent().find('.champs').remove();
 });
 
 
@@ -102,7 +91,7 @@ function equipe(a,o) {
         $('#ar_blue').append($(a))
         bleu.push(o.attaque);
         bleup.push(o.pseudo);
-    } else if (q <= 4) {
+    } else if (q < 5) {
         $('#ar_red').append($(a))
         $(a).removeClass('blue')
         $(a).addClass("rouge")
@@ -215,8 +204,9 @@ let niv = 1.1;
 function randChamp_b() {
     let champRand_b = bleu[Math.floor(Math.random() * bleu.length)];
     let champRand_bp = bleup[Math.floor(Math.random() * bleup.length)];
-    niv++
-    champRand_b + niv
+    niv++;
+    let nivPlus_b = champRand_b + niv;
+    bleu.push(nivPlus_b);
     return champRand_bp;
 }
 
@@ -224,8 +214,9 @@ function randChamp_b() {
 function randChamp_r() {
     let champRand_r = rouge[Math.floor(Math.random() * rouge.length)];
     let champRand_rp = rougep[Math.floor(Math.random() * rougep.length)];
-    niv++
-    champRand_r + niv
+    niv++;
+    let nivPlus_r = champRand_r + niv;
+    rouge.push(nivPlus_r);
     return champRand_rp;
 }
 

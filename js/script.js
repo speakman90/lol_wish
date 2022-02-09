@@ -17,7 +17,7 @@ $("#wukong").click(function(){
 
 $("#master").click(function(){
     equipe(this, master);
-    $(m).parent().find('.champs').remove();
+    $(this).parent().find('.champs').remove();
 });
 
 $("#garen").click(function(){
@@ -51,7 +51,7 @@ $("#yasuo").click(function(){
 });
 
 
-let temps = 5;
+let temps = 30;
 
 $("#go").click(function(){
 
@@ -221,22 +221,22 @@ function randChamp_r() {
 }
 
 function randItem_r() {
-    const randTime_item_r = Math.floor((Math.random() * 4) + 1);
+    const randTime_item_r = Math.floor((Math.random() * 30) + 1);
     return randTime_item_r;
 }
 
 function randItem_b() {
-    const randTime_item_b = Math.floor((Math.random() * 4) + 1);
+    const randTime_item_b = Math.floor((Math.random() * 30) + 1);
     return randTime_item_b;
 }
 
 function randExp_r() {
-    const randTime_exp_r = Math.floor((Math.random() * 4) + 1);
+    const randTime_exp_r = Math.floor((Math.random() * 30) + 1);
     return randTime_exp_r;
 }
 
 function randExp_b() {
-    const randTime_exp_b = Math.floor((Math.random() * 4) + 1);
+    const randTime_exp_b = Math.floor((Math.random() * 30) + 1);
     return randTime_exp_b;
 }
 
